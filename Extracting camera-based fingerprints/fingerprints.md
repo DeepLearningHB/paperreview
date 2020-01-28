@@ -1,4 +1,4 @@
-#Extracting camera-based fingerprints for video forensics
+# Extracting camera-based fingerprints for video forensics
 ---
 ## Abstract
 - 비디오를 촬영한 장치나 카메라를 식별하는 것은 `author verification`에 도움을 준다
