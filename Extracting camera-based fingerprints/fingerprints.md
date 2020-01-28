@@ -66,8 +66,8 @@
 모델이 사용하는 네트워크는 샴 네트워크로 같은 구조, 가중치를 공유하는 2개의 네트워크를 병렬적으로 구동하여 훈련시키는 것이다. 같은 패치인 경우 최종 Distance가 0에 가깝게 나오고 아닌 경우는 큰 값을 가지게 될 된다.  각각의 기기를 구별하는 분류 모델은 아니지만 하나의 패치 쌍에서 같은 카메라에서 온 것인지 아닌지는 구별이 가능하다. 여기서 훈련된 네트워크를 기반으로 조작된 이미지가 나오게 되면, noiseprint를 feature clustering한 heatmap에서는 깨끗한 이미지의 heatmap과는 다른 결과가 나오게 될 것이다.
 하나의 이미지를 학습속도를 위해 48 x 48의 패치로 잘라서 훈련 데이터셋으로 사용했으며 사용할 수 있는 모든 패치 쌍을 만들어서 훈련에 사용했다.
 
-![Siamese_network]('./images/siamese.jpg')
-![figure_3]("./images/figure_3.jpg")
+![Siamese_network](./images/siamese.jpg)
+![figure_3](./images/figure_3.jpg)
 
 ## Training video noiseprint extractors
 - 앞서 설명한 네트워크는 125개의 다른 카메라 데이터를 포함한 큰 데이터셋으로 훈련이 진행되었다.
@@ -107,7 +107,7 @@
   - `source identification`, `forgery manipulation detection`
 
 #### Source identification
-![figure_4]("./images/figure_4.jpg")
+![figure_4](./images/figure_4.jpg)
 - 이 모델로 비디오가 2개의 비디오가 같은 카메라 모델로부터 왔는지 아닌지를 확인한다.
 - `PRNU`에 사용된 표준 파이프 라인을 따른다.
   - 카메라 모델에 대해 일정 수의 프레임을 평균화 하여 `Reference fingerprint`(`averaged noiseprint`)를 추출한다.
@@ -121,7 +121,7 @@
     - `Set 2`는 안정화 처리된 비디오
 
 
-![auc_result]('auc_result.jpg')
+![auc_result](./images/auc_result.jpg)
 
 - `Set 1 / 모든 프레임 사용`에서는 `PRNU-based` 방법이 가장 높은 성능을 달성했다. (0.907)
 - 하지만 다른 경우는 (`Set 1 / I-frame`)에서는 성능이 떨어졌다. (0.810)
@@ -140,7 +140,7 @@
   - 이 결과를 `PRNU based reference`와 비교한다.
     - `Noiseprint based` 방법보다 훨씬 성능이 안좋다.
 
-![figure_5]("./images/figure_5.jpg")
+![figure_5](./images/figure5.jpg)
 
 - `Scenario 2: Region of interest`
   - `Face2Face`, `DeepFake`와 같이 Advanced한 manipulation이 적용된 데이터에 대해 이 시나리오를 고려
@@ -156,10 +156,10 @@
     - CNN 기반 방법은 99.41%였으나, 이 네트워크는 훈련 단계에서 조작된 비디오를 사용하지 않았고, 조작되지 않은 비디오도 사용하지 않았다.
     - 가장 우수한 결과는 `설정 c)`에서 `FaceSwap`이였다. `92.14%`
     - 가장 나쁜 결과는 `Face2Face`, `82.14%`
-![figure_6]("./images/figure_6.jpg")
-![figure_7]("./images/figure_7.jpg")
-![figure_8]("./images/figure_8.jpg")
-![table_2]("./images/table2.jpg")
+![figure_6](./images/figure6.jpg)
+![figure_7](./images/figure7.jpg)
+![figure_8](./images/figure8.jpg)
+![table_2](./images/table2.jpg)
 - `Scenario 3: Completely blind`
   - 어떠한 사전 정보가 없는 블라인드 시나리오에서 얻은 일부 결과를 보인다.
   - `noiseprint-based` 방법이 전체 프레임에 대해 작동하며 `heatmap`은 원 논문에서 설명된 것과 동일하게 추출된다.
