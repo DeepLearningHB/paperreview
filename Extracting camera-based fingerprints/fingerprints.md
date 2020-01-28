@@ -61,7 +61,7 @@
 - `noiseprint`는 `feature clustering`을 통해 `heatmap`으로 표시를 할 수 있다.
 - 48 X 48이미지에 대해 훈련을 하였다.
 
-![figure_2]('./images/residual_extractior.jpg')
+![figure_2](/images/residual_extractior.jpg)
 
 모델이 사용하는 네트워크는 샴 네트워크로 같은 구조, 가중치를 공유하는 2개의 네트워크를 병렬적으로 구동하여 훈련시키는 것이다. 같은 패치인 경우 최종 Distance가 0에 가깝게 나오고 아닌 경우는 큰 값을 가지게 될 된다.  각각의 기기를 구별하는 분류 모델은 아니지만 하나의 패치 쌍에서 같은 카메라에서 온 것인지 아닌지는 구별이 가능하다. 여기서 훈련된 네트워크를 기반으로 조작된 이미지가 나오게 되면, noiseprint를 feature clustering한 heatmap에서는 깨끗한 이미지의 heatmap과는 다른 결과가 나오게 될 것이다.
 하나의 이미지를 학습속도를 위해 48 x 48의 패치로 잘라서 훈련 데이터셋으로 사용했으며 사용할 수 있는 모든 패치 쌍을 만들어서 훈련에 사용했다.
