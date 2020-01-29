@@ -171,3 +171,7 @@
 - `Noiseprint` 방식을 비디오로 확장한 첫번째 시도.
 - 다양한 시나리오를 고려하여, `source identification`, `forgery localization`에 대한 실험 진행
 - 모델은 깨끗한 비디오로만 훈련되었고, 테스트 셋에 속하는 데이터에 대해서는 전혀 튜닝되지 않았다.
+
+
+원본 논문 링크: http://openaccess.thecvf.com/content_CVPRW_2019/papers/Media%20Forensics/Verdoliva_Extracting_camera-based_fingerprints_for_video_forensics_CVPRW_2019_paper.pdf
+참조 논문 링크: https://arxiv.org/pdf/1808.08396.pdf
